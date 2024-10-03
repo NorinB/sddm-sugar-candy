@@ -8,8 +8,6 @@ This theme focuses on a straightforward user experience and superb functionality
 
 Eucalyptus Drop should work on any SDDM installation / Linux distribution, provided dependencies are met.
 
-All controls use the [latest Qt Quick Controls 2](http://doc.qt.io/qt-5/qtquickcontrols2-index.html) for [increased performance](https://blog.qt.io/blog/2015/03/31/qt-quick-controls-for-embedded/) even on low-end or embedded systems.
-
 ## Installation
 
 ### From within KDE Plasma
@@ -22,7 +20,7 @@ If for some reason you cannot find the category named "Login Screen (SDDM)" in y
 
 Download the latest release zip and extract the contents to the theme directory of SDDM:
 
-`$ sddmthemeinstaller --install sddm-eucalyptus-drop-v1.0.1.zip`
+`$ sddmthemeinstaller --install sddm-eucalyptus-drop-v2.0.0.zip`
 
 This will extract all the files to a folder called "eucalyptus-drop" inside of the themes directory of SDDM.
 
@@ -37,37 +35,19 @@ Current=eucalyptus-drop
 
 ## Dependencies
 
-- [SDDM  >= 0.18](https://github.com/sddm/sddm)
-- [Qt5 >= 5.11](https://doc.qt.io/archives/qt-5.11/index.html) including:
-  - [`Qt Graphical Effects`](https://doc.qt.io/archives/qt-5.11/qtgraphicaleffects-index.html)
-  - [`Qt Quick Controls 2`](https://doc.qt.io/archives/qt-5.11/qtquickcontrols2-index.html)
-  - [`Qt Quick Layouts`](https://doc.qt.io/archives/qt-5.11/qtquicklayouts-index.html)
-  - [`Qt Quick Window`](https://doc.qt.io/qt-5.11/qml-qtquick-window-screen.html)
-  - [`Qt SVG`](https://doc.qt.io/archives/qt-5.11/qtsvg-index.html)
+- [SDDM  >= 0.21.0](https://github.com/sddm/sddm)
+- [Qt6](https://doc.qt.io/archives/qt-6.6/index.html) including:
+  - [`QT5 Compatibility Module`](https://doc.qt.io/qt-6/qtcore5-index.html)
+  - [`Qt SVG`](https://doc.qt.io/qt-6/qtsvg-index.html)
 
 *Make sure these are installed with their required version or higher! SDDM might need an enabled system service/daemon to work. This is often done automatically during installation. Take note that a lot of standard release distros like Debian, Mint, MX, Elementary, Deepin or Ubuntu LTS are still on earlier versions. If in doubt ask in your distros forums.*
-
-**Debian based** distros using the **APT** package manager:
-*(Ubuntu/Kubuntu/Kali/Neon/antiX etc.)*
-`sudo apt install --no-install-recommends sddm qml‑module‑qtquick‑layouts qml‑module‑qtgraphicaleffects qml‑module‑qtquick‑controls2 libqt5svg5`
-
-**Arch based** distros using the **pacman** package manger:
-*(Obarun/Artix/Manjaro/KaOS/Chakra etc.)*
-`sudo pacman -S --needed sddm qt5‑graphicaleffects qt5‑quickcontrols2 qt5‑svgz`
-
-**openSUSE** using the **zypper** package manager:
-`sudo zypper install sddm libqt5‑qtgraphicaleffects libqt5‑qtquickcontrols2 libQt5Svg5 libQt5Svg5`
-
-**Red Hat** based distros using the **dnf** package manager:
-*(Fedora/Mageia/RHEL/CentOS)*
-`sudo dnf install sddm qt5‑qtgraphicaleffects qt5‑qtquickcontrols2 qt5‑qtsvg`
 
 ## Configuration
 
 You can customise Eucalyptus Drop by editing its `theme.conf`. You can change the colours and images used, the time and date formats, the appearance of the whole interface and even how it works.
 
 It's annoying to log out and back in every time you want to see a change made to your `theme.conf`. To preview your changes from within your running desktop environment session simply run:
-`sddm-greeter --test-mode --theme /usr/share/sddm/themes/eucalyptus-drop`
+`sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/eucalyptus-drop`
 
 And as if that wouldn't still be enough you can **translate every single button and label** because SDDM still [needs your help](https://github.com/sddm/sddm/wiki/Localization) to make localisation as complete as possible!
 
